@@ -1,4 +1,3 @@
-// Array untuk menyimpan catatan
 let notes = [
     {
       id: 1,
@@ -9,26 +8,23 @@ let notes = [
     }
   ];
   
-  // Fungsi untuk menambah catatan baru
   const createNote = (heading, description, created_by) => {
     const newNote = {
-      id: notes.length + 1, // ID bertambah otomatis
+      id: notes.length + 1, 
       heading: heading,
       description: description,
       created_by: created_by,
-      created_at: 1738231734054 // Sesuai tugas
+      created_at: 1738231734054
     };
     notes.push(newNote);
     console.log("Catatan berhasil ditambahkan!");
   };
   
-  // Fungsi untuk membaca semua catatan
   const readNote = () => {
     console.log("Daftar Catatan:");
     console.log(notes);
   };
   
-  // Fungsi untuk memperbarui catatan berdasarkan ID
   const updateNote = (id, newHeading, newDescription) => {
     let found = false;
     for (let note of notes) {
@@ -45,7 +41,6 @@ let notes = [
     }
   };
   
-  // Fungsi untuk menghapus catatan berdasarkan ID
   const deleteNote = (id) => {
     let initialLength = notes.length;
     notes = notes.filter(note => note.id !== id);
@@ -56,7 +51,6 @@ let notes = [
     }
   };
   
-  // Menjalankan kode
   createNote("Belajar React", "Mempelajari dasar-dasar React.", "Jane Doe");
   readNote();
   console.log("=================================================");
